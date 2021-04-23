@@ -60,11 +60,11 @@
 
             <div class="head-callback">
 
-                <form>
-                    <input type="text" class="imask_phone" placeholder="+7 123 45 67 890">
-                    <input type="text" placeholder="Имя">
+                <form action="sendmail1.php" method="post">
+                    <input name="number" type="text" class="imask_phone" placeholder="+7 123 45 67 890">
+                    <input name="name" type="text" placeholder="Имя">
 
-                    <button class="btn">Узнать подробности</button>
+                    <button type="submit" class="btn">Узнать подробности</button>
 
                 </form>
 
@@ -221,8 +221,8 @@
 
     <div class="blockslider">
         <h2>За время этой поездки ты:</h2>
-
-        <div class="slider">
+        <div class="container-verybig">
+            <div class="slider">
             <div class="slider__item">
                 <div class="slider__item-img">
                     <img src="img/slider/1.jpg" alt="кухня">
@@ -290,6 +290,7 @@
                     <p>Познакомишься с еще<br>одним необычайно<br>красивым уголком России</p>
                 </div>
             </div>
+        </div>
         </div>
     </div>
 
@@ -339,17 +340,17 @@
                         <div class="line"></div>
                         <div class="included-type-text">
                             <h3>Проживание</h3>
-                            <p>Проживание в комфортабельных отелях</p>
+                            <p>Проживание в<br>комфортабельных отелях</p>
                         </div>
                     </div>
                     <div class="included-type">
                         <div class="included-type-img">
                             <img src="img/included/2.png" alt="">
                         </div>
-
+                        <div class="line"></div>
                         <div class="included-type-text">
-                            <h3>Проживание</h3>
-                            <p>Проживание в комфортабельных отелях</p>
+                            <h3>Питание</h3>
+                            <p>3-х разовое питание</p>
                         </div>
                     </div>
                     <div class="included-type">
@@ -358,8 +359,8 @@
                         </div>
                         <div class="line"></div>
                         <div class="included-type-text">
-                            <h3>Проживание</h3>
-                            <p>Проживание в комфортабельных отелях</p>
+                            <h3>Трансфер</h3>
+                            <p>Джипы - трансфер по пути<br>всего маршрута</p>
                         </div>
                     </div>
                     <div class="included-type">
@@ -368,8 +369,8 @@
                         </div>
                         <div class="line"></div>
                         <div class="included-type-text">
-                            <h3>Проживание</h3>
-                            <p>Проживание в комфортабельных отелях</p>
+                            <h3>Гид</h3>
+                            <p>Профессиональный гид,<br>знающий местность как<br>свои пять пальцев</p>
                         </div>
                     </div>
                     <div class="included-type">
@@ -378,8 +379,8 @@
                         </div>
                         <div class="line"></div>
                         <div class="included-type-text">
-                            <h3>Проживание</h3>
-                            <p>Проживание в комфортабельных отелях</p>
+                            <h3>Экскурсии</h3>
+                            <p>Все экскурсии, описанные в<br>программе</p>
                         </div>
                     </div>
                 </div>
@@ -476,41 +477,41 @@
 
                 <h6 class="tlt">
                     <ul class="texts">
-                        <li data-in-effect="bounceInLeft" data-out-effect="fadeOutRight">И ты найдешь себе новых друзей</li>
-                        <li data-in-effect="bounceInLeft" data-out-shuffle="fadeOutLeft">Окажешься в атмосфере настоящих приключений!</li>
-                        <li data-in-effect="bounceInLeft" data-out-effect="fadeOutRight">Добавишь в свою жизнь ярких эмоций</li>
+                        <li data-in-effect="fadeIn" data-out-effect="fadeOutRight">И ты найдешь себе новых друзей</li>
+                        <li data-in-effect="fadeIn" data-out-effect="fadeOutRight">Окажешься в атмосфере настоящих приключений!</li>
+                        <li data-in-effect="fadeIn" data-out-effect="fadeOutRight">Добавишь в свою жизнь ярких эмоций</li>
                     </ul>
                 </h6>
 
-                <form class="request-form">
-                    <input type="text" placeholder="Имя">
-                    <input type="text" class="imask_phone" placeholder="+7 123 45 67 890">
+                <form class="request-form" action="sendmail2.php" method="post">
+                    <input name="name" type="text" placeholder="Имя">
+                    <input name="number" type="text" class="imask_phone" placeholder="+7 123 45 67 890">
 
                     <p>Выбери подходящую дату поездки:</p>
 
                     <div class="request-form-input">
-                        <input type="radio" id="Choice1" name="contact" value="Choice1" class="custom-radio" checked>
+                        <input type="radio" id="Choice1" name="date" value="Choice1" class="custom-radio" checked>
                         <label for="Choice1">10-15 Мая 2021</label>
 
-                        <input type="radio" id="Choice2" name="contact" value="Choice2" class="custom-radio">
+                        <input type="radio" id="Choice2" name="date" value="Choice2" class="custom-radio">
                         <label for="Choice2">7-12 июня 2021</label>
 
-                        <input type="radio" id="Choice3" name="contact" value="Choice3" class="custom-radio">
+                        <input type="radio" id="Choice3" name="date" value="Choice3" class="custom-radio">
                         <label for="Choice3">14-19 июня 2021</label>
 
-                        <input type="radio" id="Choice4" name="contact" value="Choice4" class="custom-radio">
+                        <input type="radio" id="Choice4" name="date" value="Choice4" class="custom-radio">
                         <label for="Choice4">19-24 июля 2021</label>
 
-                        <input type="radio" id="Choice5" name="contact" value="Choice5" class="custom-radio">
+                        <input type="radio" id="Choice5" name="date" value="Choice5" class="custom-radio">
                         <label for="Choice5">2-7 августа 2021</label>
 
-                        <input type="radio" id="Choice6" name="contact" value="Choice6" class="custom-radio">
+                        <input type="radio" id="Choice6" name="date" value="Choice6" class="custom-radio">
                         <label for="Choice6">9-14 августа 2021</label>
 
                     </div>
 
 
-                    <button class="btn">Оставить заявку</button>
+                    <button type="submit"  class="btn">Оставить заявку</button>
                 </form>
 
                 <p class="request-privacy">Нажимая на кнопку, вы даете согласие на обработку персональных данных и

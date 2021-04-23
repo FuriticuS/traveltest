@@ -143,13 +143,24 @@ a, a:hover, a:visited, a:active, a:focus, input{
 
 /*----------------------------------------------- all-styles*/
 
+@font-face {
+	font-family: "Open Sans";
+	src: url("../fonts/OpenSans-Regular.ttf");
+}
+
+
 .container-small {
-	width: 960px;
+	width: 60%;
 	margin: 0 auto;
 }
 
 .container-big {
-	width: 1200px;
+	width: 80%;
+	margin: 0 auto;
+}
+
+.container-verybig {
+	width: 90%;
 	margin: 0 auto;
 }
 

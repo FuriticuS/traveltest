@@ -99,6 +99,21 @@ header {
     margin-top: 20px;
 }
 
+.head-thanx {
+    padding: 20px 0;
+    background: rgba(255,255,255,.7);
+    margin-bottom: 10px;
+}
+.head-thanx p:nth-child(2){
+    margin: 20px 0;
+}
+
+.head-thanx a{
+    display: inline;
+    color: #000;
+    border-bottom: 2px solid #ffdd70;
+}
+
 /*----------------------------------------------- gallery*/
 .gallery {
     display: flex;
@@ -122,8 +137,11 @@ header {
 
 .gallery a:hover{
     width: 26%;
+    height: 101%;
+    margin-top: -0.1%;
     z-index: 100000;
-    transition: ease all .3s;
+    box-shadow: 0px 2px 20px 2px rgba(0, 0, 0, .4);
+    transition: ease all .5s;
 }
 
 .gallery1 a:nth-child(1){
@@ -397,7 +415,7 @@ header {
 .included-type {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 30%;
     margin-bottom: 50px;
@@ -569,7 +587,7 @@ header {
 
 .reserved .container-level img{
     width: 80%;
-    height: 60px;
+    height: 70px;
 }
 
 /*----------------------------------------------- request*/
@@ -1037,23 +1055,27 @@ footer {
     background-color: #1a1a1a;
 }
 
-footer h2{
+footer h2,
+header h2{
     color: #fff;
     margin-bottom: 50px;
 }
 
-footer .foot-name {
+footer .foot-name,
+header .foot-name {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-footer .foot-name p{
+footer .foot-name p,
+header .foot-name p{
     margin: 30px 0 15px 0;
     font-size: 24px;
     color: #fff;
 }
 
-footer .foot-name .foot-name-img {
+footer .foot-name .foot-name-img,
+header .foot-name .foot-name-img {
     display: flex;
     width: 160px;
     height: 160px;
@@ -1062,7 +1084,8 @@ footer .foot-name .foot-name-img {
     background-size: cover;
 }
 
-footer .foot-name .foot-name-director {
+footer .foot-name .foot-name-director,
+header .foot-name .foot-name-director {
     text-align: center;
     margin: 0;
     font-size: 16px;
@@ -1070,19 +1093,22 @@ footer .foot-name .foot-name-director {
     color: #7ac3af;
 }
 
-footer .foot-phone {
+footer .foot-phone,
+header .foot-phone {
     margin: 50px 0;
     text-align: center;
 }
 
-footer .foot-phone p{
+footer .foot-phone p,
+header .foot-phone p{
     color: #fff;
     font-weight: 900;
     font-size: 20px;
     margin-bottom: 10px;
 }
 
-footer .foot-phone a{
+footer .foot-phone a,
+header .foot-phone a{
     display: inline;
     font-size: 20px;
     font-weight: 400;
@@ -1090,10 +1116,12 @@ footer .foot-phone a{
     border-bottom: 1px solid #ff3503;
 }
 
-footer .foot-social svg{
+footer .foot-social svg,
+header .foot-social svg{
     fill:#7ac3af
 }
-footer .foot-social svg:hover{
+footer .foot-social svg:hover,
+header .foot-social svg:hover{
     fill: #ff3503;
     transition: ease all .5s;
 }
