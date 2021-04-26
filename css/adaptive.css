@@ -79,6 +79,7 @@
     .comment .comment-img {
         height: 320px;
     }
+
 }
 
 @media (min-width: 300px) and (max-width: 1023px){
@@ -495,5 +496,20 @@
     footer {
         padding: 50px 20px;
         text-align: center;
+    }
+
+
+    .head-back-block {
+        width: 95%;
+    }
+
+    header {
+        height: 100%;
+        width: 100%;
+    }
+
+    .head-back {
+        height: 100%;
+        width: 100%;
     }
 }
