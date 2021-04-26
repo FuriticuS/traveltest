@@ -7,6 +7,10 @@ header {
     background-size: cover;
 }
 
+.menu-triger, .menu {
+    display: none;
+}
+
 .head-back{
     display: flex;
     position: relative;
@@ -550,6 +554,9 @@ header {
 .reserved .container-big {
     display: flex;
     flex-direction: column;
+}
+.reserved .container-level-phone {
+    display: none;
 }
 .reserved h2{
     margin: 50px 0 100px 0;

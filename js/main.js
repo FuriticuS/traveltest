@@ -32,7 +32,16 @@ $(document).ready(function(){
         autoplaySpeed: 3000,
         dots:true,
         adaptiveHeight: true,
-        easing:'ease'
+        easing:'ease',
+        responsive: [
+            {
+                breakpoint: 769,
+                settings: {
+                    slidesToScroll: 1,
+                    slidesToShow: 1
+                }
+            }
+        ]
     });
 
     // text animate
@@ -70,6 +79,27 @@ $(document).ready(function(){
         if (e.keyCode === 27) {
             e.stopPropagation();
             $('#myOverlay, #myModal').fadeOut();
+        }
+    });
+
+    //popup menu header
+    var $menu_popup = $('.menu-popup');
+
+    $(".menu-triger, .menu-close").click(function(){
+        $menu_popup.slideToggle(300, function(){
+            if ($menu_popup.is(':hidden')) {
+                $('body').removeClass('body_pointer');
+            } else {
+                $('body').addClass('body_pointer');
+            }
+        });
+        return false;
+    });
+
+    $(document).on('click', function(e){
+        if (!$(e.target).closest('.menu').length){
+            $('body').removeClass('body_pointer');
+            $menu_popup.slideUp(300);
         }
     });
 });
