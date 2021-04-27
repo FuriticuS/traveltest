@@ -1,31 +1,20 @@
 <?php
 
-use PHPMailer\PHPMailer\PHPMailer;
-
-require_once "vendor/autoload.php";
-
 try {
     $number = $_POST['number'];
     $name = $_POST['name'];
 
     if (isset($number) && isset($name)) {
-        $mail = new PHPMailer(true);
-        $mail->SMTPOptions = ['ssl' => ['verify_peer_name' => false]];
-        $mail->Host = gethostbyname("smtp.gmail.com");
+        $message = "Заказ с сайта travel.com: номер [$number], имя [$name]";
+        $message = wordwrap($message, 70, "\r\n");
 
-        $mail->FromName = "Авто-оповещение";
-        $mail->From = "valerymaslatch@yandex.ru";
-        $mail->Password = 'yyuu324711';
-
-        $mail->Port = 465;
-        $mail->CharSet = "UTF-8";
-        $mail->addAddress("Fur1ous@ya.ru");
-        $mail->isHTML(true);
-        $mail->Subject = "Новая заявка";
-        $mail->Body = "Заказ с сайта travel.com: номер [$number], имя [$name]";
-        $mail->send();
-        header('Location: thanks.html');
+        $isSent = mail('monosow.alex@yandex.ru', 'Новая заказ', $message);
+        if ($isSent) {
+            header('Location: thanks.html');
+        } else {
+            header('Location: thanks.html');
+        }
     }
-} catch (Exception $e) {
+} catch (Exception $exception) {
     header('Location: thanks.html');
 }
